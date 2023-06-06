@@ -1,10 +1,13 @@
 .NavContainer {
     width: 117px;
-    height: 1000px;
+    height: 90vh;
     background-color: black;
     color: white;
+    position: absolute;
+    bottom: 0;
 }
 .NavComponents {
+    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -17,14 +20,16 @@
     margin-top: 10vh;
 }
 .CopiryghtContainer {
-    margin-top: 20vh;
+    margin-bottom: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     white-space: nowrap;
+
     
 }
 .CopiryghtContainer p {
     font-size: 12px;
     transform: rotate(-90deg);
+
 }

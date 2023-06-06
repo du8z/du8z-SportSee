@@ -1,0 +1,50 @@
+.ContainerLabel {
+    margin-left: 234px;
+    font-size: 48px;
+}
+
+.TextWelcome {
+    margin-top: 40px;
+    font-weight: 500;
+
+}
+
+.ContainerLabel span {
+    color: red;
+}
+
+.TextCongratulation {
+    padding-top: 20px;
+    font-size: 24px;
+}
+.test {
+    margin-left: 500px;
+}
+.containerComponentFeatures {
+
+    margin-top: 15px;
+    margin-right: 7%;
+}
+.ComponentPosition {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.componentsLeft {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 230px;
+}
+.componentsBotPosition {
+    display: flex;
+    width: 100%;
+}
+
+
+
+
+

@@ -1,9 +1,15 @@
 import './Menu.css'
 import '../../utils/utils.css'
 import logo from '../../svg/logo.svg'
-
+import { useParams } from 'react-router-dom'
+import fetchData from '../../data/Fetch/FetchData'
 
 export default function Menu (){
+
+    const test = fetchData
+    console.log(test);
+
+
     return (
         <div className='containerMenu'>
             <div className="componentsMenu ">

@@ -1,0 +1,55 @@
+.containerRadialBar {
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    margin-right: 30px;
+    width: 90%;
+    height: 300px;
+}
+
+.TextScoreTop {
+    position: absolute;
+    margin-top: 24px;
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #74798C;
+}
+
+.TextScoreMiddle{
+    position: absolute;
+    color: #20253A;
+    font-size: 16px;
+    margin-left: 150px;
+    margin-top: 100px;
+    z-index: 5;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.TextScoreMiddle span {
+    color: #282D30;
+    font-weight: 700;
+    font-size: 26px;
+
+}
+.TextScoreMiddle p {
+    margin: 5px 0;
+}
+
+
+.whiteRingMiddle {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background-color: #FBFBFB;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, #FBFBFB 41%);
+}
+
+.parentRing {
+    position: relative;
+    width: 100%;
+    background-color: red;
+}

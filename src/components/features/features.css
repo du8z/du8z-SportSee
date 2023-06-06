@@ -1,0 +1,41 @@
+.containerFeatures {
+   width: 15vw;
+   height: 12vh;
+   background-color:#FBFBFB  ; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 39px;
+   border-radius: 5px;
+   
+}
+.svgFeatures {
+    position: relative;
+    display: flex ;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    opacity: 0.7;
+    border-radius: 6px ;
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+}
+.componentsFeatures {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.textInFeatures {
+    margin-left: 17%;
+    padding-right: 15px;
+}
+
+.textInFeatures :first-child {
+    font-size: 20px;
+    font-weight: 700;
+}
+.textInFeatures :last-child {
+    font-size: 14px;
+    font-weight: 500;
+}
