@@ -1,60 +1,50 @@
 import './ScoreChart.css'
-import { RadialBarChart, RadialBar, Legend, ResponsiveContainer, Tooltip,  } from 'recharts';
-import React from "react";
+import { RadialBarChart, RadialBar,  ResponsiveContainer,   } from 'recharts';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
+
+ 
 
 export default function ScoreCharts ()  {
-    const data = [
+    // const dataFetched = FetchDataActivity()
+    const { uid } = useParams();
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+    const fetchData = async () => {
+          try {
+          const response = await fetch(`http://localhost:3000/user/${uid}`);
+          const jsonData = await response.json();
+          setData(jsonData.data);
+          } catch (error) {
+          console.error("Une erreur s'est produite :", error);
+          }
+    };
+
+    fetchData();
+    }, [uid]);
+    if (data === null) {
+          return null; // Ou afficher un indicateur de chargement, par exemple.
+        }
+
+
+      const tableauReformat = [
         {
-          "name": "18-24",
-          "uv": 12,
-          "pv": 2400,
-          "fill": "#FF0000"
-        }  ,
-        {
-          "name": "25-29",
-          "uv": 26.69,
-          "pv": 4567,
-          "fill": "#FFF"
-        }, /*
-        {
-          "name": "30-34",
-          "uv": -15.69,
-          "pv": 1398,
-          "fill": "#8dd1e1"
+          value: data.todayScore, 
+          fill : '#FF0000'
         },
         {
-          "name": "35-39",
-          "uv": 8.22,
-          "pv": 9800,
-          "fill": "#82ca9d"
+          value: 1,
+          fill : '#FFFFFF'
         },
-        {
-          "name": "40-49",
-          "uv": -8.63,
-          "pv": 3908,
-          "fill": "#a4de6c"
-        },
-        {
-          "name": "50+",
-          "uv": -2.63,
-          "pv": 4800,
-          "fill": "#d0ed57"
-        },
-        {
-          "name": "unknow",
-          "uv": 6.67,
-          "pv": 4800,
-          "fill": "#ffc658" 
-        }  */
       ]
-
-
 
     return (
         <div className='containerRadialBar'>
         <p className='TextScoreTop'>Score</p>
         <div className='TextScoreMiddle'>
-            <p><span>{data[0].uv}%</span></p>
+            <p><span>{data.todayScore*100}%</span></p>
             <p>de votre</p>
             <p>objectif</p>  
         </div>
@@ -63,11 +53,11 @@ export default function ScoreCharts ()  {
         </div>
         </div>
         <ResponsiveContainer width="100%" height="100%">
-        <RadialBarChart cx="50%" cy="50%" innerRadius="100%" outerRadius="40%" barSize={15} data={data} >
+        <RadialBarChart cx="50%" cy="50%" innerRadius="100%" outerRadius="40%" barSize={15} data={tableauReformat} >
           <RadialBar
             minAngle={15}
             clockWise
-            dataKey="uv"
+            dataKey= 'value'
             cornerRadius={20}
           />
 

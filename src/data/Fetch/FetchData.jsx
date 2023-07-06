@@ -1,17 +1,31 @@
-// import { useParams } from "react-router-dom"
-// import React from "react"
+// import { useState, useEffect } from "react";
 
-import { useParams } from "react-router-dom";
 
-// const { id } = this.props
-const fetchData = async () => {
-    let {id} = useParams
-    await fetch(`http://localhost:3000/user/${id}/average-sessions`)
-    .then(res => res.json() )
-    .then()
-    .catch ( err => {
-        console.log(err.message);
-    })
-}
+// export default function AppTest() {
+//   const [state, setState] = useState([]);
 
-export default fetchData
+//   useEffect(() => {
+//     const dataFetch = async () => {
+//       const data = await (
+//         await fetch(
+//           "http://localhost:3000/user/12"
+//         )
+//       ).json();
+
+//       setState(data);
+//       console.log(data);
+//     };
+
+//     dataFetch();
+//   }, []);
+
+//   return (
+//     <ul>
+//       {/* {state.map((val) => (
+//         <li>{val.name}</li>
+//       ))} */}
+//     </ul>
+//   );
+// }
+
+
