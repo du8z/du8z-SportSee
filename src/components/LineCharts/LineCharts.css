@@ -6,8 +6,9 @@
     height: 300px;
 }
 .custom-tooltip-LineChart {
-    background-color: white;
+    /* background-color: white; */
     padding: 10px 15px;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0.4));
 }
 .textInLineCharts {
     color :rgba(255, 255, 255, 0.5);
