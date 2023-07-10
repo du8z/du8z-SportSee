@@ -1,5 +1,5 @@
 import "./LineCharts.css";
-import { LineChart, XAxis, Line, ResponsiveContainer } from "recharts";
+import { LineChart, XAxis, Line, ResponsiveContainer, Tooltip } from "recharts";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -40,6 +40,18 @@ export default function LineCharts() {
     min: donnees.sessionLength,
   }));
 
+
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+          return (
+                <div className="custom-tooltip-LineChart">
+                      <p className="label">{` ${payload[0].value} min`}</p>
+                </div>
+          );
+    }
+    return null;
+}
+
   return (
     <div className="ContainerLineChart">
       <p className="textInLineCharts">Durée moyenne des sessions</p>
@@ -62,6 +74,7 @@ export default function LineCharts() {
             tick={{ fill: "#FFFFFF", opacity: "0.5" }}
             strokeWidth={0}
           />
+           <Tooltip content={<CustomTooltip />} />
           <Line
             type="monotone"
             dataKey="min"
