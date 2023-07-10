@@ -42,7 +42,6 @@ export default function ScoreCharts ()  {
 
     return (
         <div className='containerRadialBar'>
-        <p className='TextScoreTop'>Score</p>
         <div className='TextScoreMiddle'>
             <p><span>{data.todayScore*100}%</span></p>
             <p>de votre</p>
@@ -50,8 +49,12 @@ export default function ScoreCharts ()  {
         </div>
         <div className='parentRing'>
         <div className='whiteRingMiddle'>
+        <p className='TextScoreTop'>Score</p>
+          
         </div>
+
         </div>
+
         <ResponsiveContainer width="100%" height="100%">
         <RadialBarChart cx="50%" cy="50%" innerRadius="100%" outerRadius="40%" barSize={15} data={tableauReformat} >
           <RadialBar
