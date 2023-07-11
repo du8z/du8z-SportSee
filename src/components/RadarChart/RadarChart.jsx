@@ -42,8 +42,10 @@ for (let i = 0; i < data.data.length; i++) {
     
     
     return (
+      <div className='vraiPapa'>
+      <div className='RadarParent'>
         <div className='RadarContainer'>
-        <ResponsiveContainer width="100%" height= '100%'>
+        <ResponsiveContainer width="100%" height= '100%' >
         <RadarChart outerRadius={90}  data={tableauReformat} >
         <PolarGrid radialLines={false} />
         <PolarAngleAxis dataKey="subject" tick={{fill : 'white', fontSize : 15}}   />
@@ -53,5 +55,7 @@ for (let i = 0; i < data.data.length; i++) {
         </RadarChart>
         </ResponsiveContainer>
         </div>
+      </div>
+      </div>
     )
 }

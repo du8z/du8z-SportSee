@@ -39,3 +39,25 @@
     font-size: 14px;
     font-weight: 500;
 }
+
+@media screen and (max-width : 1300px) {
+    
+
+
+    .containerFeatures {
+        width: 200px;
+        height: 12vh;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .textInFeatures :first-child {
+        font-size: 18px;
+    }
+    .textInFeatures {
+        font-size: 15px;
+    }
+    .svgFeatures {
+        width: 40px;
+        height: 40px;
+    }
+}

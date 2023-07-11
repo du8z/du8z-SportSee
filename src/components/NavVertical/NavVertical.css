@@ -33,3 +33,11 @@
     transform: rotate(-90deg);
 
 }
+
+@media screen and (max-width: 1300px) {
+    .NavContainer {
+        height: 120%;
+        top: 10%;
+        bottom: none;
+    }
+}

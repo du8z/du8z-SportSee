@@ -45,6 +45,34 @@
 }
 
 
+@media screen and (max-width : 1300px) {
+
+
+    .TextWelcome {
+        font-size: 30px;
+    }
+    .TextCongratulation{
+        font-size: 18px;
+    }
+    .ContainerLabel {
+        margin-left: 165px;
+    }
+    .componentsLeft {
+        margin-left: 318px;
+    }
+    .containerComponentFeatures {
+        display: flex;
+        margin-left: 170px;
+    }
+    .ComponentPosition {
+        flex-direction: column;
+    }
+    .componentsBotPosition{
+        width: 88vw;
+    }
+}
+
+
 
 
 

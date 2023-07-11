@@ -46,3 +46,8 @@
 .custom-tooltip :first-child {
     margin-bottom: 10px;
 }
+@media screen and (max-width : 1300px) {
+    .container {
+        width: 80%;
+    }
+}
