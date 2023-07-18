@@ -22,3 +22,13 @@
 .responsiveDiv {
     width: 31%;
 }
+
+@media screen and (max-width : 1300px) {
+
+
+ .responsiveDiv {
+    width: 47%;
+    margin-bottom: 30px;
+ }
+
+}

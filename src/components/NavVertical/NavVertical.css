@@ -4,7 +4,7 @@
     background-color: black;
     color: white;
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
 }
 .NavComponents {
     height: 100%;
@@ -36,8 +36,7 @@
 
 @media screen and (max-width: 1300px) {
     .NavContainer {
-        height: 110%;
+        height: 170%;
         top: 10%;
-        bottom: none;
     }
 }

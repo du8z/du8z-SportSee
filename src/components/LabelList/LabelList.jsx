@@ -63,13 +63,13 @@ export default function LabelList() {
                         <div className="componentsLeft">
                               <BarList />
                               <div className="componentsBotPosition">
-                                    <div className="responsiveDiv">
+                                    <div  className="chartsPosition responsiveDiv ">
                                           <LineCharts />
                                     </div>
                                     <div className="responsiveDiv">
                                           <RadarChartComponent />
                                     </div>
-                                    <div className="responsiveDiv">
+                                    <div className="chartsPosition responsiveDiv ">
                                           <ScoreCharts />
                                     </div>
                               </div>

@@ -69,7 +69,17 @@
     }
     .componentsBotPosition{
         width: 88vw;
+        flex-wrap: wrap;
     }
+    
+    .componentsBotPosition :nth-child(even) {
+        order: -1;
+        width: 100%;
+    }
+    .chartsPosition {
+        width: 100%;
+    }
+
 }
 
 
