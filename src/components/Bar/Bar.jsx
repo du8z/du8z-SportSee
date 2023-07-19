@@ -1,4 +1,3 @@
-
 import "./Bar.css";
 import {
       BarChart,
@@ -34,16 +33,14 @@ export default function BarList() {
             return <div>Chargement des données...</div>;
       }
       const { sessions } = data;
-
       const tableauReformat = sessions.map((donnees) => {
             const lastDigit = donnees.day.slice(-1); // Récupère le dernier chiffre de "day"
             return {
                   name: lastDigit,
-                  uv: donnees.kilogram,
-                  pv: donnees.calories,
+                  uv: donnees.calories,
+                  pv: donnees.kilogram,
             };
       });
-
 
       const CustomTooltip = ({ active, payload, label }) => {
             if (active && payload && payload.length) {
@@ -100,7 +97,7 @@ export default function BarList() {
                               </p>
                         </div>
                   </div>
-                  <ResponsiveContainer width="100%" height= '100%'>
+                  <ResponsiveContainer width="100%" height="100%">
                         <BarChart
                               stroke={"black"}
                               data={tableauReformat}
@@ -122,7 +119,7 @@ export default function BarList() {
                                     dy={10}
                                     tickLine={false}
                                     scale={"point"}
-                                    padding={{ right: 15, left: 15, }}
+                                    padding={{ right: 15, left: 15 }}
                                     z={true.toString()}
                               />
                               <YAxis
