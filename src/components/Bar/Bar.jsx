@@ -127,7 +127,7 @@ export default function BarList() {
                                     tick={{ fill: "#9B9EAC" }}
                                     stroke="white"
                                     tickCount={3}
-                                    orientation="right" /* domain={3} */
+                                    orientation="right" 
                               />
 
                               <Tooltip content={<CustomTooltip />} />

@@ -35,15 +35,13 @@ export default function RadarChartComponent() {
             return <div>Chargement des données...</div>;
       }
 
-      let tableauReformat = [];
-      for (let i = 0; i < data.data.length; i++) {
-            let Table = {
-                  subject: data.kind[i + 1],
-                  key: data.data[i].kind,
-                  value: data.data[i].value,
+      const tableauReformat = data.data.map((donnees, i) => {
+            return {
+              subject: data.kind[i + 1],
+              key: donnees.kind,
+              value: donnees.value,
             };
-            tableauReformat.push(Table);
-      }
+          });
 
       return (
             <div className="vraiPapa">
