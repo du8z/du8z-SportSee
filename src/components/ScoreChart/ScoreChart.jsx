@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
  
 
 export default function ScoreCharts ()  {
-    // const dataFetched = FetchDataActivity()
     const { uid } = useParams();
     const [data, setData] = useState(null);
 
