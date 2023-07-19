@@ -22,7 +22,7 @@ export default function RadarChartComponent () {
   }, [uid]);
 
   if (data === null) {
-    return null; 
+        return <div>Chargement des données...</div>;
   }
 
 
@@ -47,9 +47,9 @@ for (let i = 0; i < data.data.length; i++) {
         <div className='RadarContainer'>
         <ResponsiveContainer width="100%" height= '100%' >
         <RadarChart outerRadius={90}  data={tableauReformat} >
-        <PolarGrid radialLines={false} />
+        <PolarGrid radialLines={+false} />
         <PolarAngleAxis dataKey="subject" tick={{fill : 'white', fontSize : 15}}   />
-        <PolarRadiusAxis  tick={false} axisLine={false}   />
+        <PolarRadiusAxis  tick={+false} axisLine={+false}   />
         <Radar  dataKey= 'value' stroke="#282D30" fill="rgb(255, 1, 1)" fillOpacity={0.7} />
         <Legend />
         </RadarChart>

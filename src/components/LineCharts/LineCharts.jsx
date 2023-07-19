@@ -22,7 +22,7 @@ export default function LineCharts() {
   }, [uid]);
 
   if (data === null) {
-    return null;
+    return <div>Chargement des données...</div>;
   }
 
   const calendarDay = {
